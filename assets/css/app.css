@@ -1,0 +1,535 @@
+/* css resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+    color: #333;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+}
+
+/* helper classes */
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+/* header section*/
+.header {
+    background-color: white;
+    padding: 16px;
+    height: 70px;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.nav-brand-logo {
+    width: 100px;
+    height: 30px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-item {
+    /* margin: 5px; */
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.nav-link {
+    font-size: 12px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+.nav-button {
+    padding: 8px 16px;
+    background-color: transparent;
+    color: #3865ff;
+    border: #f6f8f9 1px solid;
+}
+
+.nav-button:hover {
+    background-color: #3865ff;
+    color: white;
+    border: 1px solid white;
+}
+
+/* hero section */
+.hero {
+    /* border: 1px solid black; */
+    background-color: white;
+    margin: 1px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    /* align-content: center; */
+    /* justify-content: center; */
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 40px;
+    font-weight: 700;
+    /* display: flex; */
+}
+
+.hero-title span {
+    color: #3865ff;
+}
+
+.hero-text {
+    margin: 5px auto;
+    line-height: 15px;
+    font-size: 10px;
+    color: grey;
+}
+
+.hero-button {
+    margin: 30px auto;
+    padding: 10px 25px;
+    background-color: #3865ff;
+    color: white;
+}
+
+.hero-button:hover {
+    background-color: white;
+    color: #3865ff;
+    border: #3865ff 1px solid;
+}
+
+/* How section*/
+.how {
+    /* border: 1px solid black; */
+}
+
+.how-img-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.how-img {
+    flex: 1 0 auto;
+    margin: 10px;
+    height: 250px;
+    width: 300px;
+}
+
+/* the gap property can also be used to achieve not having borders at the edges */
+.how-img:first-child {
+    margin-left: 0;
+}
+
+.how-img:last-child {
+    margin-right: 0;
+}
+
+.how-card-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+}
+
+.how-card {
+    display: flex;
+    gap: 10px;
+}
+
+.how-card-content-title {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.how-card-icon {
+    margin: 0 5px;
+}
+
+.how-card-content-text {
+    font-size: 12px;
+    line-height: 20px;
+    color: grey;
+}
+
+/* marketplace section */
+.marketplace {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 25px;
+    /* gap is used in any container that has the flex property */
+}
+
+.marketplace-img-container {
+    display: flex;
+    align-items: center;
+    margin-right: -20%;
+}
+
+.marketplace-img:first-child {
+    width: 320px;
+    height: 320px;
+    z-index: 10;
+}
+
+.marketplace-img:last-child {
+    width: 400px;
+    height: 400px;
+    margin-left: -35%;
+    z-index: 20;
+}
+
+.marketplace-content {
+    margin-top: 20px;
+    
+}
+
+.marketplace-content-title {
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.marketplace-content-description {
+    font-size: 12px;
+    line-height: 20px;
+    color: grey;
+}
+
+.marketplace-cta {
+    margin: 20px 0;
+    padding: 10px 25px;
+    background-color: #3865ff;
+    color: white;
+}
+
+.marketplace-cta:hover {
+    background-color: white;
+    color: #3865ff;
+    border: #3865ff 1px solid;
+}
+
+/* artworks section */
+.artworks {
+    /* border: 1px solid black; */
+    margin-top: 80px;
+}
+
+.artworks-title-holder {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 15;
+}
+
+.artworks-title {
+    font-size: 40px;
+    /* font-weight: 750px; */
+}
+
+.artworks-title-text {
+    font-size: 12px;
+    line-height: 20px;
+    color: grey;
+    margin-bottom: 20px;
+}
+
+.artworks-art-conatiner {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 0px 10px 0 15px; */
+    justify-content: space-between;
+    background-color: whitesmoke;
+}
+
+.artworks-card {
+    border: 3px solid rgb(241, 225, 225);
+    margin: 10px;
+    padding: 10px;
+    width: 210px;
+    height: 320px; 
+    background-color: white;
+    position: relative;
+    /* box-shadow: 10px 5px 5px grey; */
+}
+
+.artworks-card:hover {
+    box-shadow: 10px 5px 5px grey;
+}
+
+.artworks-img {
+    width: 100%;
+    height: 180px;
+    padding: 5px;
+    /* position: relative; */
+}
+
+.artworks-img-watermark {
+    display: flex;
+    justify-content: space-between;
+    width: 190px;
+    position: absolute;
+    top: 22px;
+
+}
+
+.artworks-img-timer {
+    background-color: transparent;
+    padding: 3px;
+    color: whitesmoke;
+    font-size: 18px;
+    margin-left: 10px;
+    border: transparent 1px solid;
+}
+
+/* .artworks-img-heart {
+    padding: 6px;
+    color: whitesmoke;
+    background-color: rgb(209, 194, 194);
+} */
+
+.fa-heart {
+    background-color: transparent;
+    padding: 6px;
+    color: rgb(250, 245, 245);
+    border: white 1px solid;
+    margin-right: 15px;
+}
+
+.fa-heart:hover {
+    color: red;
+    
+}
+
+.card-text-area {
+    padding: 5px;
+}
+
+.art-worth {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-image {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.art-user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.art-amount {
+    color: grey;
+}
+
+.art-username {
+    font-size: 12px;
+}
+
+.fa-ethereum {
+    color: #3865ff
+}
+
+/* nft artist section */
+.nft-popular-artiste {
+    margin: 60px auto;
+    height: 400px;
+}
+
+.nft-popular-artiste-container {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    height: 300px;
+}
+
+.nft-popular-artiste-content-container {
+    /* border: 1px grey solid; */
+    width: 800px;
+}
+
+.nft-popular-artiste-content {
+    margin-top: 100px;
+    font-size: 35px;
+    line-height: 40px;
+}
+
+.nft-popular-artiste-text {
+    font-size: 13px;
+    line-height: 20px;
+    color: grey;
+    margin-bottom: 10px;
+}
+
+.nft-artiste-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    /* gap: 10; */
+}
+
+.nft-artiste {
+    flex: 1 0 auto;
+    width: 230px;
+    height: 200px;
+    margin: 10px;
+}
+
+.nft-popular-artiste-cta {
+    margin: 20px 0;
+    padding: 10px 25px;
+    background-color: #3865ff;
+    color: white;
+}
+
+.nft-popular-artiste-cta:hover {
+    background-color: white;
+    color: #3865ff;
+    border: #3865ff 1px solid;
+}
+
+
+/* call-to-action section */
+.call-to-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3865ff;
+    height: 250px;
+    margin-top: 150px;
+}
+
+.cta-text{
+    margin-left: 70px;
+    font-size: 40px;
+    color: white;
+}
+
+.cta-button {
+    margin-right: 70px;
+    padding: 10px 25px;
+    background-color: white;
+    color: #3865ff;
+}
+
+.cta-button:hover {
+    background-color: whitesmoke;
+    color: #3865ff;
+    border: 1px solid white;
+}
+
+/* footer section */
+.crafftt-footer-container {
+    height: 300px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.crafftt-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-text {
+    font-size: 20px;
+    font-weight: 200;
+    color: rgb(53, 51, 51);
+}
+
+.crafftt-info-list {
+    margin-top: 20px; 
+}
+
+.crafftt-info-link {
+    color: grey;
+}
+
+.language-select {
+    width: 220px;
+    height: 40px;
+    padding: 2px;
+    border: #f6f8f9 1px solid;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.policy-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+}
+
+.terms {
+    color: grey;
+}
+
+.policy {
+    margin-left: 25px;
+}
+
+.term-text {
+    color: grey;
+}
